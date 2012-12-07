@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.aljoschability.eclipse.grapadeto.diagram.editor.PatternsDiagramEditor"
+            default="true"
+            extensions="patterns,patterns.diagrams"
+            icon="icons/editor/file_icon.png"
+            id="com.aljoschability.patterns.ui.editor"
+            name="Patterns Diagram Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <wizard
+            class="com.aljoschability.eclipse.grapadeto.diagram.ui.CreatePatternsResourcesWizard"
+            finalPerspective="com.aljoschability.patterns.ui.perspectives"
+            icon="icons/editor/file_icon.png"
+            id="com.aljoschability.patterns.ui.diagram"
+            name="Patterns Diagram">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            description="This diagram represents a story diagram."
+            id="org.storydriven.modeling.diagram"
+            name="Story Diagram"
+            type="org.storydriven.modeling.diagram">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="com.aljoschability.eclipse.grapadeto.diagram.editor.provider.DiagramTypeProvider"
+            id="org.storydriven.modeling.diagram.SDMDiagramTypeProvider"
+            name="Story Diagram">
+         <diagramType
+               id="org.storydriven.modeling.diagram">
+         </diagramType>
+         <imageProvider
+               id="org.storydriven.modeling">
+         </imageProvider>
+      </diagramTypeProvider>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.imageProviders">
+      <imageProvider
+            class="com.aljoschability.eclipse.grapadeto.diagram.editor.provider.ImageProvider"
+            id="org.storydriven.modeling">
+      </imageProvider>
+   </extension>
+   <extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="org.storydriven.modeling.diagram.PropertyContributor"
+            labelProvider="com.aljoschability.eclipse.grapadeto.diagram.properties.SDMLabelProvider"
+            typeMapper="com.aljoschability.eclipse.grapadeto.diagram.properties.SDMTypeMapper">
+            <propertyCategory
+                  category="org.storydriven.modeling.properties"></propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+         <propertyTabs
+               contributorId="org.storydriven.modeling.diagram.PropertyContributor">
+            <propertyTab
+                  category="org.storydriven.modeling.properties"
+                  id="org.storydriven.modeling.properties.model"
+                  label="Model">
+            </propertyTab>
+            <propertyTab
+                  afterTab="org.storydriven.modeling.properties.model"
+                  category="org.storydriven.modeling.properties"
+                  id="org.storydriven.modeling.properties.advanced"
+                  label="Advanced">
+            </propertyTab>
+         </propertyTabs>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="org.storydriven.modeling.diagram.PropertyContributor">
+         <propertySection
+               class="com.aljoschability.eclipse.grapadeto.diagram.properties.NamedElementNameSection"
+               filter="com.aljoschability.eclipse.grapadeto.diagram.properties.Filters$NamedElementFilter"
+               id="org.storydriven.modeling.name"
+               tab="org.storydriven.modeling.properties.model">
+         </propertySection>
+      </propertySections>
+   </extension>
+
+</plugin>

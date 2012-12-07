@@ -1,0 +1,171 @@
+/**
+ * <copyright>
+ * 
+ * Copyright 2013 by Aljoschability and others. All rights reserved.
+ * 
+ * This program and its materials are made available under the terms of the
+ * Eclipse Public License v1.0 which should be contained in this distribution.
+ * 
+ * Contributors:
+ *    Aljoscha Hark <aljoschability@gmail.com> - Initial code
+ * 
+ * </copyright>
+ */
+@Ecore(nsURI="http://www.aljoschability.com/eclipse/grepadeto/2011")
+@GenModel(copyrightText="<copyright>\r\n\r\nCopyright 2013 by Aljoschability and others. All rights reserved.\r\n\r\nThis program and its materials are made available under the terms of the\r\nEclipse Public License v1.0 which should be contained in this distribution.\r\n\r\nContributors:\r\n   Aljoscha Hark <aljoschability@gmail.com> - Initial code\r\n\r\n</copyright>",
+	complianceLevel="7.0",
+	nonNLSMarkers="true",
+	codeFormatting="true",
+	creationIcons="false",
+	multipleEditorPages="false",
+	suppressEMFModelTags="true",
+	suppressGenModelAnnotations="false",
+	pluginKey="",
+	providerPackageSuffix="edit",
+	modelDirectory="/com.aljoschability.eclipse.grepadeto/src/main/xcore",
+	editDirectory="/com.aljoschability.eclipse.grepadeto.providers/src/main/xcore",
+	editPluginID="com.aljoschability.eclipse.grepadeto.edit",
+	editPluginClass="com.aljoschability.eclipse.grepadeto.edit.Activator")
+package com.aljoschability.eclipse.grapadeto
+
+import org.eclipse.emf.ecore.EClass
+import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.EAttribute
+
+abstract class Named
+{
+	String[1] name = ""
+}
+
+abstract class Commentable extends Named
+{
+	String comment
+}
+
+abstract class Weighted extends Commentable
+{
+	double weight
+}
+
+abstract class Fragmented extends Weighted
+{
+	refers Fragment[] parents
+}
+
+abstract class Constrained extends Fragmented
+{
+	contains Constraint[] constraints
+}
+
+abstract class Node extends Fragmented
+{
+	Modifier[1] modifier
+	refers Connection[] outgoings opposite source
+	refers Connection[] incomings opposite target
+}
+
+abstract class Connection extends Commentable
+{
+	refers Node[1] source opposite outgoings
+	refers Node[1] target opposite incomings
+}
+
+abstract class Constraint extends Weighted {
+	refers Constrained[1] constraining
+}
+
+@GenModel(image="false")
+class BooleanConstraint extends Constraint 
+{
+	boolean[1] additional
+	Operator[1] operator
+	String[1] value
+}
+
+@GenModel(image="false")
+class Catalog extends Commentable
+{
+	contains Pattern[] patterns opposite catalog
+	String modelId
+}
+
+@GenModel(image="false")
+class Pattern extends Commentable
+{
+	contains PatternOccurrence[] patterns opposite pattern
+	contains ObjectOccurrence[] objects opposite pattern
+	contains Fragment[] fragments opposite pattern
+	contains ConstraintExpression[] constraints
+	contains Link[] links opposite pattern
+	contains Path[] paths opposite pattern
+	boolean[1] ^abstract
+	refers Catalog catalog opposite patterns
+	String[1] typeId
+}
+
+@GenModel(image="false")
+class ConstraintExpression extends Fragmented
+{
+}
+
+@GenModel(image="false")
+class Link extends Connection
+{
+	refers Pattern pattern opposite links
+	refers EReference[1] ^type
+}
+
+@GenModel(image="false")
+class AttributeConstraint extends BooleanConstraint {
+	refers EAttribute[1] attribute
+}
+
+@GenModel(image="false")
+class Path extends Connection
+{
+	refers Pattern pattern opposite paths
+}
+
+@GenModel(image="false")
+class Fragment extends Commentable
+{
+	container Pattern[1] pattern opposite fragments
+	refers PatternOccurrence[] patterns opposite fragments
+	refers ObjectOccurrence[] objects opposite fragments
+	Modifier[1] modifier
+}
+
+@GenModel(image="false")
+class PatternOccurrence extends Commentable
+{
+	container Pattern[1] pattern opposite patterns
+	refers Fragment[] fragments opposite patterns
+	refers Pattern[1] ^type
+}
+
+@GenModel(image="false")
+class ObjectOccurrence extends Commentable
+{
+	container Pattern[1] pattern opposite objects
+	refers Fragment[] fragments opposite objects
+	refers EClass[1] ^type
+}
+
+enum Modifier
+{
+	NORMAL
+	ADDITIONAL
+	NEGATIVE
+	SET
+}
+
+enum Operator
+{
+	EQUAL
+	UNEQUAL
+	LESS
+	LESS_EQUAL
+	GREATER
+	GREATER_EQUAL
+	REGEX
+}

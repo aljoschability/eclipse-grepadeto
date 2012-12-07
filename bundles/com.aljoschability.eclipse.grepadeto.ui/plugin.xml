@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.7"?>
+
+<plugin>
+
+   <extension point="org.eclipse.ui.menus">
+      <menuContribution locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="com.aljoschability.patterns.ui.menu"
+               label="Patterns">
+         </menu>
+      </menuContribution>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.aljoschability.eclipse.grapadeto.ui.PatternsPerspective"
+            icon="icons/perspective.png"
+            id="com.aljoschability.patterns.ui.perspectives"
+            name="Patterns">
+         <description>
+            description body text
+         </description>
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <category
+            id="com.aljoschability.patterns.ui.commands"
+            name="Patterns">
+      </category>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="com.aljoschability.patterns.ui.newWizards"
+            name="Patterns">
+      </category>
+      <primaryWizard
+            id="com.aljoschability.patterns.ui.wizards.CreatePatternsCatalogWizard">
+      </primaryWizard>
+      <wizard
+            category="com.aljoschability.patterns.ui.newWizards"
+            class="com.aljoschability.eclipse.grapadeto.ui.wizards.CreatePatternsCatalogWizard"
+            finalPerspective="com.aljoschability.patterns.ui.perspectives"
+            icon="icons/wizards/create_patterns_catalog.png"
+            id="com.aljoschability.patterns.ui.wizards.CreatePatternsCatalogWizard"
+            name="Create Patterns Catalog">
+         <description>
+            description body text
+         </description>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.views">
+      <category
+            id="com.aljoschability.patterns.ui.views"
+            name="Patterns">
+      </category>
+   </extension>
+
+</plugin>

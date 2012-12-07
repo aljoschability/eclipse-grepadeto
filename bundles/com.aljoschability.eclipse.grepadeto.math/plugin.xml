@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.7"?>
+<plugin>
+
+   <extension-point id="function" name="Mathematical Function" schema="schema/function.exsd"/>
+
+   <extension point="com.aljoschability.eclipse.grapadeto.math.function">
+      <function
+            class="com.aljoschability.eclipse.grapadeto.math.impl.LinearFunction"
+            id="org.reecore.math.function.linear"
+            name="Linear Function">
+         <parameter
+               default="0"
+               description="The offset of x."
+               id="deltaX"
+               name="Δx">
+         </parameter>
+         <parameter
+               default="0"
+               description="The offset of y."
+               id="deltaY"
+               name="Δy">
+         </parameter>
+         <parameter
+               default="0"
+               description="The gradient m."
+               id="gradient"
+               name="Gradient">
+         </parameter>
+      </function>
+
+      <function
+            class="com.aljoschability.eclipse.grapadeto.math.impl.Lim0EFunction"
+            id="org.reecore.math.function.exponential.lim0"
+            name="Exponential strictly decreasing function with limit 0">
+         <parameter
+               default="5"
+               description="The offset of x."
+               id="deltaX"
+               name="Δx">
+         </parameter>
+         <parameter
+               default="-0.1"
+               description="The offset of y."
+               id="deltaY"
+               name="Δy">
+         </parameter>
+         <parameter
+               default="0.1"
+               id="epsilon"
+               name="ε">
+         </parameter>
+         <parameter
+               default="4"
+               id="compression"
+               name="Compression">
+         </parameter>
+      </function>
+      <function
+            class="com.aljoschability.eclipse.grapadeto.math.impl.Lim1EFunction"
+            id="org.reecore.math.function.exponential.lim1"
+            name="Exponential strictly increasing function with limit 1">
+         <parameter
+               default="5"
+               description="The offset of x."
+               id="deltaX"
+               name="Δx">
+         </parameter>
+         <parameter
+               default="-0.1"
+               description="The offset of y."
+               id="deltaY"
+               name="Δy">
+         </parameter>
+         <parameter
+               default="0.1"
+               id="epsilon"
+               name="ε">
+         </parameter>
+         <parameter
+               default="4"
+               id="compression"
+               name="Compression">
+         </parameter>
+      </function>
+   </extension>
+
+</plugin>

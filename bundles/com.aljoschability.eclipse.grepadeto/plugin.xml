@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.7"?>
+<plugin>
+
+   <extension-point id="type" name="Patterns Type" schema="schema/type.exsd"/>
+   <extension-point id="model" name="Patterns Model" schema="schema/model.exsd"/>
+   <extension-point id="metric" name="Patterns Metric" schema="schema/metric.exsd"/>
+   <extension-point id="metricCalculator" name="Metric Calculator" schema="schema/metricCalculator.exsd"/>
+   <extension point="com.aljoschability.eclipse.grapadeto.type">
+      <type
+            id="normal"
+            name="Normal Pattern">
+      </type>
+   </extension>
+   <extension point="com.aljoschability.eclipse.grapadeto.metric">
+      <metric
+            acronym="NOM"
+            id="com.aljoschability.patterns.metric.nom"
+            name="Number of Methods">
+      </metric>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated stapade -->
+      <package
+            uri="http://www.aljoschability.com/eclipse/grapadeto/2013"
+            class="com.aljoschability.eclipse.grapadeto.GrapadetoPackage"
+            genModel="model/grepadeto.xcore"/>
+   </extension>
+
+</plugin>
