@@ -23,11 +23,11 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
-import com.aljoschability.eclipse.grapadeto.Catalog;
-import com.aljoschability.eclipse.grapadeto.GrapadetoFactory;
-import com.aljoschability.eclipse.grapadeto.Pattern;
 import com.aljoschability.eclipse.grapadeto.ui.Activator;
 import com.aljoschability.eclipse.grapadeto.ui.UIImages;
+import com.aljoschability.eclipse.grepadeto.Catalog;
+import com.aljoschability.eclipse.grepadeto.GrepadetoFactory;
+import com.aljoschability.eclipse.grepadeto.Pattern;
 
 public class CreatePatternsCatalogWizard extends Wizard implements INewWizard {
 	private CreatePatternsCatalogWizardPage page;
@@ -92,11 +92,11 @@ public class CreatePatternsCatalogWizard extends Wizard implements INewWizard {
 			@Override
 			public void run(IProgressMonitor monitor) throws InvocationTargetException, InterruptedException {
 				// prepare catalog
-				Catalog catalog = GrapadetoFactory.eINSTANCE.createCatalog();
+				Catalog catalog = GrepadetoFactory.eINSTANCE.createCatalog();
 				catalog.setName("First Catalog");
 				catalog.setModelId(modelID);
 
-				Pattern pattern = GrapadetoFactory.eINSTANCE.createPattern();
+				Pattern pattern = GrepadetoFactory.eINSTANCE.createPattern();
 				pattern.setName("First Pattern");
 				pattern.setCatalog(catalog);
 

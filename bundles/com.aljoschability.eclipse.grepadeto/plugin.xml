@@ -6,13 +6,13 @@
    <extension-point id="model" name="Patterns Model" schema="schema/model.exsd"/>
    <extension-point id="metric" name="Patterns Metric" schema="schema/metric.exsd"/>
    <extension-point id="metricCalculator" name="Metric Calculator" schema="schema/metricCalculator.exsd"/>
-   <extension point="com.aljoschability.eclipse.grapadeto.type">
+   <extension point="com.aljoschability.eclipse.grepadeto.type">
       <type
             id="normal"
             name="Normal Pattern">
       </type>
    </extension>
-   <extension point="com.aljoschability.eclipse.grapadeto.metric">
+   <extension point="com.aljoschability.eclipse.grepadeto.metric">
       <metric
             acronym="NOM"
             id="com.aljoschability.patterns.metric.nom"
@@ -23,8 +23,8 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated stapade -->
       <package
-            uri="http://www.aljoschability.com/eclipse/grapadeto/2013"
-            class="com.aljoschability.eclipse.grapadeto.GrapadetoPackage"
+            uri="http://www.aljoschability.com/eclipse/grepadeto/2013"
+            class="com.aljoschability.eclipse.grepadeto.GrepadetoPackage"
             genModel="model/grepadeto.xcore"/>
    </extension>
 

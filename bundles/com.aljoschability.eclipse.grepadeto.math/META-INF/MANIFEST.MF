@@ -13,5 +13,5 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib,
  com.aljoschability.eclipse.core.runtime,
  com.aljoschability.eclipse.core.ui,
- com.aljoschability.eclipse.grapadeto
+ com.aljoschability.eclipse.grepadeto
 Export-Package: com.aljoschability.eclipse.grapadeto.math

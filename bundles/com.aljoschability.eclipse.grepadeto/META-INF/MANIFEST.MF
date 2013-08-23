@@ -1,13 +1,13 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: com.aljoschability.eclipse.grapadeto;singleton:=true
+Bundle-SymbolicName: com.aljoschability.eclipse.grepadeto;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
-Bundle-Activator: com.aljoschability.eclipse.grapadeto.Activator
+Bundle-Activator: com.aljoschability.eclipse.grepadeto.Activator
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.core.runtime,
@@ -19,8 +19,8 @@ Require-Bundle: org.eclipse.core.resources,
  org.eclipse.xtext.xbase.lib;visibility:=reexport,
  com.aljoschability.eclipse.core.runtime,
  com.aljoschability.eclipse.core.ui
-Export-Package: com.aljoschability.eclipse.grapadeto,
- com.aljoschability.eclipse.grapadeto.impl,
- com.aljoschability.eclipse.grapadeto.model,
- com.aljoschability.eclipse.grapadeto.util,
- com.aljoschability.eclipse.grapadeto.utils
+Export-Package: com.aljoschability.eclipse.grepadeto,
+ com.aljoschability.eclipse.grepadeto.impl,
+ com.aljoschability.eclipse.grepadeto.model,
+ com.aljoschability.eclipse.grepadeto.util,
+ com.aljoschability.eclipse.grepadeto.utils
