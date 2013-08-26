@@ -33,6 +33,71 @@
       <import feature="com.aljoschability.eclipse.core.graphiti.feature"/>
       <import feature="com.aljoschability.eclipse.core.properties.feature"/>
       <import feature="com.aljoschability.eclipse.core.runtime.feature"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xcore.lib"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.xtend.lib"/>
+      <import plugin="org.eclipse.xtext.xbase.lib"/>
+      <import plugin="com.aljoschability.eclipse.core.runtime"/>
+      <import plugin="com.aljoschability.eclipse.core.ui"/>
+      <import plugin="org.eclipse.emf"/>
+      <import plugin="org.eclipse.emf.transaction"/>
+      <import plugin="org.eclipse.gef"/>
+      <import plugin="org.eclipse.graphiti"/>
+      <import plugin="org.eclipse.graphiti.mm"/>
+      <import plugin="org.eclipse.graphiti.pattern"/>
+      <import plugin="org.eclipse.graphiti.ui"/>
+      <import plugin="org.eclipse.graphiti.ui.capabilities"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.osgi"/>
    </requires>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto.analysis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto.diagram"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto.math"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.aljoschability.eclipse.grepadeto.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
 </feature>
