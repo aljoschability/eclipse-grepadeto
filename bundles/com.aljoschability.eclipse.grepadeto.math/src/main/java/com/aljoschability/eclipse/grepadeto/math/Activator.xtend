@@ -1,8 +1,8 @@
-package com.aljoschability.eclipse.grapadeto.math;
+package com.aljoschability.eclipse.grepadeto.math;
 
 import com.aljoschability.core.ui.runtime.AbstractActivator
 import com.aljoschability.core.ui.runtime.IActivator
-import com.aljoschability.eclipse.grapadeto.math.impl.MathImages
+import com.aljoschability.eclipse.grepadeto.math.impl.MathImages
 
 final class Activator extends AbstractActivator {
 	static IActivator INSTANCE

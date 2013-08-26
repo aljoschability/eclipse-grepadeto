@@ -1,4 +1,4 @@
-package com.aljoschability.eclipse.grapadeto.math;
+package com.aljoschability.eclipse.grepadeto.math;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -14,8 +14,9 @@ import org.eclipse.core.runtime.Platform;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 
-import com.aljoschability.eclipse.grapadeto.math.impl.FunctionImpl;
-import com.aljoschability.eclipse.grapadeto.math.impl.ParameterImpl;
+import com.aljoschability.eclipse.grepadeto.math.Activator;
+import com.aljoschability.eclipse.grepadeto.math.impl.FunctionImpl;
+import com.aljoschability.eclipse.grepadeto.math.impl.ParameterImpl;
 
 public final class MathUtil {
 	private static final String ID_FUNCTION = "com.aljoschability.patterns.math.function"; //$NON-NLS-1$

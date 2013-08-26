@@ -1,4 +1,4 @@
-package com.aljoschability.eclipse.grapadeto.math;
+package com.aljoschability.eclipse.grepadeto.math;
 
 import java.util.Map;
 

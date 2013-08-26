@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Patterns Math
-Bundle-SymbolicName: com.aljoschability.eclipse.grapadeto.math;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: com.aljoschability.eclipse.grapadeto.math.Activator
+Bundle-SymbolicName: com.aljoschability.eclipse.grepadeto.math;singleton:=true
+Bundle-Version: 0.7.0.qualifier
+Bundle-Activator: com.aljoschability.eclipse.grepadeto.math.Activator
 Bundle-Vendor: Aljoschability
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.framework;version="1.3.0"
@@ -14,4 +14,4 @@ Require-Bundle: org.eclipse.core.runtime,
  com.aljoschability.eclipse.core.runtime,
  com.aljoschability.eclipse.core.ui,
  com.aljoschability.eclipse.grepadeto
-Export-Package: com.aljoschability.eclipse.grapadeto.math
+Export-Package: com.aljoschability.eclipse.grepadeto.math

@@ -1,4 +1,4 @@
-package com.aljoschability.eclipse.grapadeto.math.impl;
+package com.aljoschability.eclipse.grepadeto.math.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.Map;
 
 import org.eclipse.swt.graphics.Image;
 
-import com.aljoschability.eclipse.grapadeto.math.Calculator;
-import com.aljoschability.eclipse.grapadeto.math.Function;
-import com.aljoschability.eclipse.grapadeto.math.Parameter;
+import com.aljoschability.eclipse.grepadeto.math.Calculator;
+import com.aljoschability.eclipse.grepadeto.math.Function;
+import com.aljoschability.eclipse.grepadeto.math.Parameter;
 
 public final class FunctionImpl implements Function {
 

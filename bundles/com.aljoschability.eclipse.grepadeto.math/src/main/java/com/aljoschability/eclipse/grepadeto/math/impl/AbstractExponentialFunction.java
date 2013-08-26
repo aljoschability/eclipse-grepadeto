@@ -1,10 +1,10 @@
-package com.aljoschability.eclipse.grapadeto.math.impl;
+package com.aljoschability.eclipse.grepadeto.math.impl;
 
 import java.util.Map;
 
-import com.aljoschability.eclipse.grapadeto.math.Activator;
-import com.aljoschability.eclipse.grapadeto.math.Calculator;
-import com.aljoschability.eclipse.grapadeto.math.Function;
+import com.aljoschability.eclipse.grepadeto.math.Activator;
+import com.aljoschability.eclipse.grepadeto.math.Calculator;
+import com.aljoschability.eclipse.grepadeto.math.Function;
 
 public abstract class AbstractExponentialFunction implements Calculator {
 

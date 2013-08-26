@@ -1,6 +1,6 @@
-package com.aljoschability.eclipse.grapadeto.math.impl;
+package com.aljoschability.eclipse.grepadeto.math.impl;
 
-import com.aljoschability.eclipse.grapadeto.math.Parameter;
+import com.aljoschability.eclipse.grepadeto.math.Parameter;
 
 public class ParameterImpl implements Parameter {
 	private final String id;

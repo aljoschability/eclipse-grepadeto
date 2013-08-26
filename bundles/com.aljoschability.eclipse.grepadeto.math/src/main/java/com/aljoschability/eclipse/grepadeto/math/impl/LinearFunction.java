@@ -1,8 +1,8 @@
-package com.aljoschability.eclipse.grapadeto.math.impl;
+package com.aljoschability.eclipse.grepadeto.math.impl;
 
 import java.util.Map;
 
-import com.aljoschability.eclipse.grapadeto.math.Calculator;
+import com.aljoschability.eclipse.grepadeto.math.Calculator;
 
 public class LinearFunction implements Calculator {
 

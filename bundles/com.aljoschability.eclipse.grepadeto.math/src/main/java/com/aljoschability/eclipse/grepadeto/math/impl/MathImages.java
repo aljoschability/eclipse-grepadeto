@@ -1,4 +1,4 @@
-package com.aljoschability.eclipse.grapadeto.math.impl;
+package com.aljoschability.eclipse.grepadeto.math.impl;
 
 public interface MathImages {
 	String LINEAR = "icons/linear.png"; //$NON-NLS-1$

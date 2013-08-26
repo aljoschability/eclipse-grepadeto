@@ -12,12 +12,12 @@
 </copyright>
 -->
 	<modelVersion>4.0.0</modelVersion>
-	<artifactId>com.aljoschability.eclipse.grapadeto.diagram</artifactId>
+	<artifactId>com.aljoschability.eclipse.grepadeto.diagram</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<parent>
-		<groupId>com.aljoschability.eclipse.grapadeto</groupId>
-		<artifactId>com.aljoschability.eclipse.grapadeto.parent</artifactId>
-		<version>0.4.0-SNAPSHOT</version>
+		<groupId>com.aljoschability</groupId>
+		<artifactId>com.aljoschability.eclipse.grepadeto.master</artifactId>
+		<version>0.7.0-SNAPSHOT</version>
 		<relativePath>../..</relativePath>
 	</parent>
 </project>

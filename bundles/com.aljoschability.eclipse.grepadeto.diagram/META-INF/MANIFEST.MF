@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: com.aljoschability.eclipse.grapadeto.diagram;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: com.aljoschability.eclipse.grepadeto.diagram;singleton:=true
+Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: com.aljoschability.eclipse.grepadeto.diagram.Activator
 Bundle-Vendor: %providerName
 Require-Bundle: org.eclipse.core.runtime,
@@ -21,6 +21,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.xtend.lib,
  com.aljoschability.eclipse.core.runtime,
  com.aljoschability.eclipse.core.ui,
- com.aljoschability.eclipse.grepadeto;bundle-version="1.0.0"
+ com.aljoschability.eclipse.grepadeto
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy

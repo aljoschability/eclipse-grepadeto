@@ -1,66 +1,67 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
-<copyright>
-	Copyright 2013 by Aljoschability and others. All rights reserved. This
-	program and its materials are made available under the terms of the Eclipse
-	Public License v1.0 which is referenced inside the distribution.
+	Copyright 2013 Aljoschability and others. All rights reserved.
+
+	This program and the accompanying materials are made available under the
+	terms of the Eclipse Public License v1.0 which accompanies this distribution,
+	and is available at http://www.eclipse.org/legal/epl-v10.html
 
 	Contributors:
-		Aljoscha Hark <aljoschability@gmail.com> - Initial code
-
-</copyright>
+		Aljoscha Hark <mail@aljoschability.com>- initial API and implementation
 -->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.aljoschability.eclipse.grapadeto</groupId>
-	<artifactId>com.aljoschability.eclipse.grapadeto.parent</artifactId>
-	<version>0.4.0-SNAPSHOT</version>
+	<groupId>com.aljoschability</groupId>
+	<artifactId>com.aljoschability.eclipse.grepadeto.master</artifactId>
+	<version>0.7.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
 	<properties>
-		<tycho-version>0.18.1</tycho-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho.version>0.21.0</tycho.version>
+		<xtend.version>2.7.2</xtend.version>
 	</properties>
-
 	<modules>
-		<module>bundles/com.aljoschability.eclipse.grapadeto</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.analysis</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.diagram</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.edit</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.editor</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.math</module>
-		<module>bundles/com.aljoschability.eclipse.grapadeto.ui</module>
-
-		<!--<module>bundles/com.aljoschability.eclipse.grapadeto.tests</module>-->
-
-		<!--<module>features/com.aljoschability.eclipse.grapadeto.feature</module>-->
-
-		<!--<module>repositories/com.aljoschability.eclipse.grapadeto.repository</module>-->
+		<!-- bundles -->
+		<module>bundles/com.aljoschability.eclipse.grepadeto</module>
+		<module>bundles/com.aljoschability.eclipse.grepadeto.analysis</module>
+		<module>bundles/com.aljoschability.eclipse.grepadeto.diagram</module>
+		<module>bundles/com.aljoschability.eclipse.grepadeto.edit</module>
+		<module>bundles/com.aljoschability.eclipse.grepadeto.math</module>
+		<module>bundles/com.aljoschability.eclipse.grepadeto.ui</module>
+		<!-- tests -->
+		<!--<module>bundles/com.aljoschability.eclipse.grepadeto.tests</module>-->
+		<!-- features -->
+		<module>features/com.aljoschability.eclipse.grepadeto.feature</module>
+		<!-- repositories -->
+		<module>repositories/com.aljoschability.eclipse.grepadeto.repository</module>
 	</modules>
-
 	<repositories>
-		<!-- add eclipse kepler repository to resolve basic dependencies -->
+		<!-- add eclipse repository to resolve basic dependencies -->
 		<repository>
-			<id>eclipse-kepler</id>
+			<id>eclipse-luna</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/kepler</url>
+			<url>http://download.eclipse.org/releases/luna</url>
+		</repository>
+		<repository>
+			<id>eclipse-license</id>
+			<url>http://download.eclipse.org/cbi/updates/license/</url>
+			<layout>p2</layout>
 		</repository>
 	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
 				<!-- enable tycho build extension -->
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<extensions>true</extensions>
 			</plugin>
 			<plugin>
 				<!-- enable build environments -->
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho-version}</version>
+				<version>${tycho.version}</version>
 				<configuration>
 					<environments>
 						<environment>
