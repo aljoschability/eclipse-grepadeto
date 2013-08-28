@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Patterns Math
+Bundle-Name: %bundle.name
 Bundle-SymbolicName: com.aljoschability.eclipse.grepadeto.math;singleton:=true
 Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: com.aljoschability.eclipse.grepadeto.math.Activator
-Bundle-Vendor: Aljoschability
+Bundle-Vendor: %bundle.vendor
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Import-Package: org.osgi.framework;version="1.3.0"
 Bundle-ActivationPolicy: lazy

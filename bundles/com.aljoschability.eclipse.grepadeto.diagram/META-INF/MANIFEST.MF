@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: %pluginName
+Bundle-Name: %bundle.name
 Bundle-SymbolicName: com.aljoschability.eclipse.grepadeto.diagram;singleton:=true
 Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: com.aljoschability.eclipse.grepadeto.diagram.Activator
-Bundle-Vendor: %providerName
+Bundle-Vendor: %bundle.vendor
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf,
  org.eclipse.emf.ecore.xmi,
